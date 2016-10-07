@@ -46,9 +46,9 @@ namespace testProject_1
             {
                 string email = textBoxEmail.Text;
                 string password = passwordBox1.Password;
-                SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-7FART4C\\SQLEXPRESS;Initial Catalog=UserInfo;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and password='" + password + "'", con);
+                SqlCommand cmd = new SqlCommand("Select * from UserInformation where Email='" + email + "'  and password='" + password + "'", con);
                 cmd.CommandType = CommandType.Text;
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = cmd;

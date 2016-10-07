@@ -89,9 +89,9 @@ namespace testProject_1
                 {
                     errormessage.Text = "";
                     string address = textBoxAddress.Text;
-                    SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
+                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-7FART4C\\SQLEXPRESS;Initial Catalog=UserInfo;Integrated Security=True");
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Registration (FirstName,LastName,Email,Password,Address) values('" + firstname + "','" + lastname + "','" + email + "','" + password + "','" + address + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert into UserInformation (FirstName,LastName,Email,Password,Address) values('" + firstname + "','" + lastname + "','" + email + "','" + password + "','" + address + "')", con);
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                     con.Close();
